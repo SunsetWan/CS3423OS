@@ -15,7 +15,7 @@ def MakeServerSocket(host='', port=8888, limit=10):
 s = MakeServerSocket()
 while True:
 	conn, addr = s.accept()
-	conn.sendall(bytes(5))
+	conn.sendall(bytes(6))
 
 	
 

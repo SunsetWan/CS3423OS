@@ -28,13 +28,13 @@ L = []
 T = (17,(12,(6,None,None),(14,None,None)),(35,(32,None,None),(40,None,None)))
 for v in YieldBST(T):
 	conn.sendall(str(v).encode('utf-8'))
+	conn.recv(6)
 
 
 
 
 
 
-conn.recv(6)
 	
 	
 

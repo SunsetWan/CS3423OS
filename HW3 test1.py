@@ -1,4 +1,14 @@
-import socket 
+import socket
+
+def YieldBST(T):
+	if type(T) is not tuple:
+		if T is not None:
+			yield T
+	else:
+		yield from YieldBST(T[1])
+		yield from YieldBST(T[0])
+		yield from YieldBST(T[2])
+
 
 def MakeServerSocket(host='', port=8888, limit=10):
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
@@ -12,11 +22,18 @@ def MakeServerSocket(host='', port=8888, limit=10):
 	return s
 	
 	
-s = MakeServerSocket()
-while True:
-	conn, addr = s.accept()
-	conn.sendall(bytes(6))
+L = []
+T = (17,(12,(6,None,None),(14,None,None)),(35,(32,None,None),(40,None,None)))
+for v in YieldBST(T):
+	conn.sendall(str(v).encode('utf-8'))
 
+
+s = MakeServerSocket()
+
+conn, addr = s.accept()
+conn.sendall(data)
+conn.recv(6)
+	
 	
 
 	

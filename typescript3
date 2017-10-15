@@ -1,0 +1,16 @@
+Script started on Sun 15 Oct 2017 05:26:37 AM PDT
+]0;nthu-os@ubuntu: ~[01;32mnthu-os@ubuntu[00m:[01;34m~[00m$ telnet localhost 8888
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+6q
+12w
+14e
+17r
+32t
+35y
+40u
+Connection closed by foreign host.
+]0;nthu-os@ubuntu: ~[01;32mnthu-os@ubuntu[00m:[01;34m~[00m$ exit
+
+Script done on Sun 15 Oct 2017 05:27:06 AM PDT

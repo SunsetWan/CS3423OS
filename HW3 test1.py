@@ -20,7 +20,8 @@ def MakeServerSocket(host='', port=8888, limit=10):
 		sys.exit(-1)
 	s.listen(limit) 
 	return s
-	
+
+s = MakeServerSocket()	
 conn, addr = s.accept()
 
 L = []
@@ -29,7 +30,7 @@ for v in YieldBST(T):
 	conn.sendall(str(v).encode('utf-8'))
 
 
-s = MakeServerSocket()
+
 
 
 

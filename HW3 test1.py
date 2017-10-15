@@ -21,7 +21,8 @@ def MakeServerSocket(host='', port=8888, limit=10):
 	s.listen(limit) 
 	return s
 	
-	
+conn, addr = s.accept()
+
 L = []
 T = (17,(12,(6,None,None),(14,None,None)),(35,(32,None,None),(40,None,None)))
 for v in YieldBST(T):
@@ -30,8 +31,8 @@ for v in YieldBST(T):
 
 s = MakeServerSocket()
 
-conn, addr = s.accept()
-conn.sendall(data)
+
+
 conn.recv(6)
 	
 	

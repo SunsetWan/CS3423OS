@@ -1,5 +1,5 @@
 # hw1.py 
-# Name: Wan Chenxi, Student ID: x1067086 
+# 
 # comments
 # your code here
 def PrintBST(T):

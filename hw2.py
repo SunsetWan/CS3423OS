@@ -1,5 +1,5 @@
 # hw2.py 
-# Name: Wan Chenxi, Student ID: x1067086 
+# 
 # comments
 # your code here
 if __name__ == '__main__':

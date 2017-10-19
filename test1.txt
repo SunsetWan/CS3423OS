@@ -1,7 +1,8 @@
 Hello,World!
-<<<<<<< HEAD
-
-=======
-for dev
->>>>>>> dev
+1
+2
+3
+4
+5
+6
 Fuck,World!

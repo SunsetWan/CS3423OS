@@ -1,3 +1,7 @@
 Hello,World!
-for master
+<<<<<<< HEAD
+
+=======
+for dev
+>>>>>>> dev
 Fuck,World!

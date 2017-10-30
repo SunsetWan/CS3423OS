@@ -38,20 +38,28 @@ class Task:
 
    def decrRemaining(self):
      # call this method to decrement the remaining CPU burst time
+     self.remaining_time = self.remaining_time - 1
      
 
    def remainingTime(self):
      # return the remaining CPU burst time
+     return self.remaining_time
 
    def done(self):
      # returns a boolean for if this task has remaining work to do
-
+     if (self.remaining_time > 0)
+       return True
+     else
+       return False
+      
    def setCompletionTime(self, time):
      # records the clock value when the task is completed
+     self.completion_time = time 
 
    def turnaroundTime(self):
       # returns the turnaround time of this atask, as on
       # week 7 lecture slide 10
+     return 
 
    def incrWaitTime(self):
       # increments the amount of waiting time

@@ -75,14 +75,16 @@ class Task:
       # the priority queue can just cast it to tuple before comparison.
       # it depends on the policy
       if (self.scheme == 'FCFS'):
-         t = (self.release, )  # example, but you may want a secondary
+         t = (self.release, self.last_dispatched_time)  # example, but you may want a secondary
            # priority for tie-breaker. if so, just add them to the tuple.
       elif (self.scheme == 'SJF'): # shortest job first
-         t = # tuple that defines priority in terms of "job length"
+          # tuple that defines priority in terms of "job length"
              # or is it really job length?
+         t = (self.cpuBurst, self.last_dispatched_time)
       elif (self.scheme == 'RR'): # round robin
-         t = # define round robin priority if you use a MinHeap;
+          # define round robin priority if you use a MinHeap;
              # or you could just use a FIFO.
+         t = 
       else:
          raise ValueError("Unknown scheme %s" % self.scheme)
       for i in t:

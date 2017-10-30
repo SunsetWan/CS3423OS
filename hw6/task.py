@@ -57,15 +57,18 @@ class Task:
      self.completion_time = time 
 
    def turnaroundTime(self):
-      # returns the turnaround time of this atask, as on
+      # returns the turnaround time of this task, as on
       # week 7 lecture slide 10
-     return 
+     return self.completion_time - self.last_dispatched_time
 
    def incrWaitTime(self):
       # increments the amount of waiting time
+     self.waiting_time = self.waiting_time + 1
+     return self.waiting_time
 
    def releaseTime(self):
      # returns the release time of ths task
+     return self.release
 
    def __iter__(self):
       # this enables converting the task into a tuple() type so that

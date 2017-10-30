@@ -1,4 +1,4 @@
-
+from minheap import MinHeap
 class Task:
    def __init__(self, name, release, cpuBurst):
       # the task has a string name, release time and cpuBurst.
@@ -84,7 +84,8 @@ class Task:
       elif (self.scheme == 'RR'): # round robin
           # define round robin priority if you use a MinHeap;
              # or you could just use a FIFO.
-         t = 
+         t = MinHeap()
+         t.put((self.last_dispatched_time, self.remaining_time))
       else:
          raise ValueError("Unknown scheme %s" % self.scheme)
       for i in t:

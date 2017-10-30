@@ -10,16 +10,18 @@ class NPScheduler:
       self.policy = policy
       # instantiate the readyQueue, which may be a FIFO or MinHeap
       # you may need additional queues for 
-      # - tasks that have been added but not released yet
-      # - tasks that have been completed
+      # - tasks that have been added but not released yet -> task1
+      # - tasks that have been completed -> task2
       # - the Gantt chart
-
+      task1 = FIFO()
+      task2 = FIFO()
 
 
    def addTask(self, task):
       # if the release time of the new task is not in the future, then
       # put it in ready queue; otherwise, put into not-ready queue.
       # you may need to copy the scheduler policy into the task
+      
 
 
    def dispatch(self, task):
